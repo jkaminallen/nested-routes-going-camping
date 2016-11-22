@@ -1,0 +1,13 @@
+<% unless @campsite %>
+  <h1><%= @title %></h1>
+<% else %>
+  <h2> Campers bunking in <%= @campsite.name %> </h2>
+<% end %>
+
+<ul>
+  <% @campers.each do |camper| %>
+    <li>
+      <%= camper.name %>
+    </li>
+  <% end %>
+</ul>
